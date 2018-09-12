@@ -1,0 +1,31 @@
+name: Slack Webhook
+version: 0.1.0
+description: Push forms results into slack messages
+icon: plug
+author:
+  name: Damien Bry
+  email: damien@elyios.com
+  url: https://damienbry.io
+homepage: https://github.com/Orbmancer/grav-plugin-slack-webhook
+keywords: grav, plugin, slack, webhook, form, process, action, backend, automate
+bugs: https://github.com/Orbmancer/grav-plugin-slack-webhook/issues
+docs: https://github.com/Orbmancer/grav-plugin-slack-webhook/blob/master/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    webhook_url:
+      type: text
+      label: Slack Incoming Webhook URL
+
